@@ -29,31 +29,27 @@ public class Main {
         }
         System.out.println();
 
-        char newCharArr [] = new char[arrayCharakter.length];
+        String arrayCharakterToString = new String(arrayCharakter);
 
-        newCharArr = Arrays.copyOf(arrayCharakter, arrayCharakter.length);
+        StringBuilder sb = new StringBuilder(arrayCharakterToString);
+        System.out.println(sb.reverse());
+
+        int wieViel = 3;
 
 
+        for(int i = 0; i < wieViel; i++) {
+            char last= arrayCharakter[0];
 
-        for(int l = 0; l < arrayCharakter.length; l++) {
+          for (int j = 0; j < arrayCharakter.length - 1; j++) {
+              arrayCharakter[j] = arrayCharakter[j+1];
+          }
+            arrayCharakter[arrayCharakter.length-1] = last;
 
-            if(l > 21) {
-                arrayCharakter[l] = newCharArr[newCharArr.length-l-1];
-            } else {arrayCharakter[l] = newCharArr[l+3];
-               }
-            System.out.print(arrayCharakter [l] + " ");
+            System.out.println(arrayCharakter[arrayCharakter.length-1]);
         }
-        System.out.println();
 
-        for(int m = 0; m < arrayCharakter.length; m++) {
-
-            if(m < 4) {
-                arrayCharakter[m] = newCharArr[newCharArr.length-m-1];
-            } else if (m > 21) {arrayCharakter[m] = newCharArr[newCharArr.length-m-1];
-            }
-            System.out.print(arrayCharakter [m] + " ");
+        for(int i = 0; i < arrayCharakter.length; i++) {
+            System.out.print(arrayCharakter[i]);
         }
     }
-
-
 }
