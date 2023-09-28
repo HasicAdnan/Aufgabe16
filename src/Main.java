@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -29,9 +31,9 @@ public class Main {
 
         char newCharArr [] = new char[arrayCharakter.length];
 
-        for (int k = 0; k < newCharArr.length; k++) {
-            newCharArr[k] = arrayCharakter[k];
-        }
+        newCharArr = Arrays.copyOf(arrayCharakter, arrayCharakter.length);
+
+
 
         for(int l = 0; l < arrayCharakter.length; l++) {
 
