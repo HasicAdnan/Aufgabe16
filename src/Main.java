@@ -29,8 +29,8 @@ public class Main {
 
         char newCharArr [] = new char[arrayCharakter.length];
 
-        for (int m = 0; m < newCharArr.length; m++) {
-            newCharArr[m] = arrayCharakter[m];
+        for (int k = 0; k < newCharArr.length; k++) {
+            newCharArr[k] = arrayCharakter[k];
         }
 
         for(int l = 0; l < arrayCharakter.length; l++) {
